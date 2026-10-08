@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-formgong",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "n8n nodes for Formgong, a form backend: trigger on new form submissions (signed webhooks), list and create forms, read submissions.",
 	"license": "MIT",
 	"homepage": "https://formgong.com/en/docs/webhooks/",
@@ -46,8 +46,8 @@
 		]
 	},
 	"devDependencies": {
-		"@n8n/node-cli": "0.33.1",
-		"eslint": "9.29.0",
+		"@n8n/node-cli": "0.51.3",
+		"eslint": "9.39.4",
 		"prettier": "3.8.3",
 		"release-it": "20.2.0",
 		"typescript": "5.9.3"

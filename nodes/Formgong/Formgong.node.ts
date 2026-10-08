@@ -15,7 +15,7 @@ export class Formgong implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Formgong',
 		name: 'formgong',
-		icon: 'file:../../icons/formgong.svg',
+		icon: { light: 'file:../../icons/formgong.svg', dark: 'file:../../icons/formgong.dark.svg' },
 		group: ['input'],
 		version: 1,
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',

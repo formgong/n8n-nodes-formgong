@@ -11,7 +11,7 @@ export class FormgongApi implements ICredentialType {
 
 	displayName = 'Formgong API';
 
-	icon: Icon = 'file:../icons/formgong.svg';
+	icon: Icon = { light: 'file:../icons/formgong.svg', dark: 'file:../icons/formgong.dark.svg' };
 
 	documentationUrl = 'https://formgong.com/en/docs/mcp/';
 

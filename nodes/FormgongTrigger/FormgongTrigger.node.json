@@ -2,7 +2,7 @@
 	"node": "n8n-nodes-formgong.formgongTrigger",
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
-	"categories": ["Communication", "Marketing"],
+	"categories": ["Communication", "Marketing & Content"],
 	"resources": {
 		"credentialDocumentation": [{ "url": "https://formgong.com/en/docs/mcp/" }],
 		"primaryDocumentation": [{ "url": "https://formgong.com/en/docs/webhooks/" }]

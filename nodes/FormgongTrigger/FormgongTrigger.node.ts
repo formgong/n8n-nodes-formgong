@@ -18,13 +18,12 @@ export class FormgongTrigger implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Formgong Trigger',
 		name: 'formgongTrigger',
-		icon: 'file:../../icons/formgong.svg',
+		icon: { light: 'file:../../icons/formgong.svg', dark: 'file:../../icons/formgong.dark.svg' },
 		group: ['trigger'],
 		version: 1,
 		subtitle: 'New submission',
 		description: 'Starts the workflow when a Formgong form receives a submission',
 		defaults: { name: 'Formgong Trigger' },
-		usableAsTool: true,
 		inputs: [],
 		outputs: [NodeConnectionTypes.Main],
 		credentials: [{ name: 'formgongApi', required: true }],
@@ -97,7 +96,8 @@ export class FormgongTrigger implements INodeType {
 				if (data.webhookId && data.formId) {
 					try {
 						await formgongTool.call(this, 'delete_webhook', { form_id: data.formId, webhook_id: data.webhookId });
-					} catch {
+					} catch (error) {
+						this.logger.warn('Formgong: could not remove the webhook', { error: (error as Error).message });
 						return false;
 					}
 				}
